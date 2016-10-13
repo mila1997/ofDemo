@@ -2,7 +2,18 @@
 
 //--------------------------------------------------------------
 void ofApp::setup(){
+ cout<<"Hello from setup"<<endl;
 
+ ifstream infile{"input"};//create an input file handle to the file input
+ if(!infile)//test if the handle was created successfully
+{
+ cout<<"Error reading from file bin/data/input"<<endl;
+ return;
+}
+
+else
+
+ infile>>N;//reads from the file
 }
 
 //--------------------------------------------------------------
@@ -15,9 +26,9 @@ void ofApp::draw(){
 ofBackground(0);
 ofTranslate(ofGetWidth()/2, ofGetHeight()/2);
 
-for(int i = 0; i < 3; i++)
+for(int i = 0; i < N; i++)
  {
-   ofRotate(20);
+   ofRotate(8524);
    ofDrawLine(0,0,0,220);
 
  }
